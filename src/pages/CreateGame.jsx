@@ -21,7 +21,7 @@ function CreateGame() {
       producer: gameProducer,
       releaseYear: gameRelaseYear,
       sales: gameSales,
-      value: gameValue
+      value: gameValue,
     }
 
     console.log(data)
@@ -44,7 +44,7 @@ function CreateGame() {
           <br/>
           <label htmlFor="gameDescription">Descrição</label>
           <br/>
-          <input type="text" name="description" id="gameDescription" value={gameDescription} onChange={e => setGameDescription(e.target.value)}/>
+          <textarea name="description" id="gameDescription" cols="30" rows="5" value={gameDescription} onChange={e => setGameDescription(e.target.value)}></textarea>
           <br/>
           <label htmlFor="gameProducer">Produtora</label>
           <br/>

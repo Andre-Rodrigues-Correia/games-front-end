@@ -6,11 +6,9 @@ function List({data}) {
         <div className="container">
             {
                 data.map((e, i) => {
-                    if(e.sales > 100){
                         return <div className="data" key={i}>
                         <h3>{e.name}</h3>
                     </div> 
-                    }   
                 })
             }
         </div>

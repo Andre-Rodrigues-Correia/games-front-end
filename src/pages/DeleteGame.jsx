@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import api from '../services/api'
+import './styles/styles.css'
 
 const DeleteGame = () => {
 
@@ -18,7 +19,6 @@ const DeleteGame = () => {
   }, []);
 
   function deleteGames(id){
-    //e.preventDefault();
     api.delete(`/game/delete/${id}`).then(res => {
       alert('Jogo excluido com sucesso')
     })
@@ -30,14 +30,17 @@ const DeleteGame = () => {
 
   return (
     <>
-      <div className="deleteList">
+      <div className="list">
       <h2>Lista de Jogos</h2>
       <ul>
       {
             listGames.map((game, i) => {
-                return <div className="data" key={i}>
+                return <div className="listGames" key={i}>
                     <li>{`Jogo: ${game.name}, valor: ${game.value}.`}</li>
-                    <button onClick={e => deleteGames(game._id)}>Deletar</button>
+                    <div className='btn'>
+                      <button onClick={e => deleteGames(game._id)}>Deletar</button>
+                    </div>
+                    
                 </div> 
             })
         }

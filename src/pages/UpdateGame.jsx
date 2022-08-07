@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import api from '../services/api'
+import './styles/styles.css'
 
 const UpdateGame = () => {
 
@@ -51,13 +52,13 @@ const UpdateGame = () => {
 
   return (
     <>
-       <form onSubmit={e => onSubmit(e)}>
+       <form className='form' onSubmit={e => onSubmit(e)}>
                 <h2>Atualizar Jogo</h2>
 
                 <select name="games" id="idgame" value={game} onChange={game => setGame(game.target.value)}>
                     <option value={-1}>Selecione um Jogo</option>
                     {listGames.map((game, i) => {
-                        return <option value={game._id} key={Number(i)}>{`Jogo: ${game.name}`}</option>
+                        return <option value={game._id} key={Number(i)}>{`${game.name}`}</option>
                     })}
                 </select>
                 <br/>
@@ -67,7 +68,7 @@ const UpdateGame = () => {
                 <br/>
                 <label htmlFor="gameDescription">Descrição</label>
                 <br/>
-                <input type="text" name="description" id="gameDescription" value={gameDescription} onChange={e => setGameDescription(e.target.value)}/>
+                <textarea name="description" id="gameDescription" cols="30" rows="5" onChange={e => setGameDescription(e.target.value)}></textarea>
                 <br/>
                 <label htmlFor="gameProducer">Produtora</label>
                 <br/>

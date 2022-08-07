@@ -1,0 +1,37 @@
+
+.list{
+    background-color:#F2A71B;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 30px;
+    justify-content: center;
+    
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+.listGames{
+    display: block;
+}
+
+.btn{
+    margin-left: 10px;
+    display: inline-block;
+}
+
+li{
+    width: 300px;
+    display: inline-block;
+}
+
+button{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

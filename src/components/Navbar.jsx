@@ -16,10 +16,10 @@ const Navbar = () => {
             <li><Link to='/delete-game'>DeleteGame</Link></li>
         </ul>
 
-        <form action="">
+        {/* <form action="">
             <input type="text" placeholder='nome do jogo...'/>
             <button type="submit"><BiSearchAlt2/></button>
-        </form>
+        </form> */}
       </nav>
   )
 }

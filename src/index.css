@@ -8,6 +8,7 @@
 body {
   background-color:#BFB78F;
   color: #011F26;
+  text-align: center;
 }
 
 a{
@@ -23,21 +24,20 @@ a:hover{
 .form{
   background-color:#F2A71B;
   position: relative;
+  text-align: start;
   display: inline-block;
-  margin-left: 50%;
   margin-top: 10px;
   padding: 30px;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
-  
+}
+.form > h2{
+  text-align: center;
 }
 
 .destaque{
   background-color:#F2A71B;
   position: relative;
   display: inline-block;
-  margin-left: 50%;
   margin-top: 10px;
   padding: 30px;
   justify-content: center;
@@ -45,7 +45,7 @@ a:hover{
   border-radius: 10px;
 }
 
-.data{
+/* .data{
   background-color:#F2A71B;
   position: relative;
   display: inline-block;
@@ -55,4 +55,4 @@ a:hover{
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-}
+} */
