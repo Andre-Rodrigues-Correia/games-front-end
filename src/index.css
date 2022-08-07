@@ -45,14 +45,12 @@ a:hover{
   border-radius: 10px;
 }
 
-/* .data{
-  background-color:#F2A71B;
-  position: relative;
-  display: inline-block;
-  margin-left: 50%;
-  margin-top: 10px;
-  padding: 30px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-} */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}

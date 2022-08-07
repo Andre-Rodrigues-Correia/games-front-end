@@ -30,13 +30,13 @@ const DeleteGame = () => {
 
   return (
     <>
-      <div className="list">
+      <div className="listDelete">
       <h2>Lista de Jogos</h2>
       <ul>
       {
             listGames.map((game, i) => {
-                return <div className="listGames" key={i}>
-                    <li>{`Jogo: ${game.name}, valor: ${game.value}.`}</li>
+                return <div className="listGamesDelete" key={i}>
+                    <li>{`Jogo: ${game.name}, valor: R$${game.value}.`}</li>
                     <div className='btn'>
                       <button onClick={e => deleteGames(game._id)}>Deletar</button>
                     </div>

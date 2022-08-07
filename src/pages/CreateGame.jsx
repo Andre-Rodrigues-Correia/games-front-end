@@ -10,6 +10,7 @@ function CreateGame() {
     const [gameRelaseYear, setGameRelaseYear] = useState('')
     const [gameSales, setGameSales] = useState(0)
     const [gameValue, setGameValue] = useState(0)
+    const [gameFrontCover, setGameFrontCover] = useState('')
 
   function onSubmit(e){
     e.preventDefault();
@@ -17,6 +18,7 @@ function CreateGame() {
     const data = {
       name: gameName,
       description: gameDescription,
+      frontCover: gameFrontCover,
       genre: gameGenre,
       producer: gameProducer,
       releaseYear: gameRelaseYear,
@@ -37,6 +39,7 @@ function CreateGame() {
   return (
     <>
       <div className='form'>
+      <h2>Cadastrar Jogo</h2>
         <form onSubmit={e => onSubmit(e)}>
           <label htmlFor="gameName">Nome</label>
           <br/>
@@ -46,6 +49,10 @@ function CreateGame() {
           <br/>
           <textarea name="description" id="gameDescription" cols="30" rows="5" value={gameDescription} onChange={e => setGameDescription(e.target.value)}></textarea>
           <br/>
+          <label htmlFor="gameFrontCover">Capa</label>
+          <br/>
+          <input type="text" name="gameFrontCover" id="gameFrontCover" value={gameFrontCover} onChange={e => setGameFrontCover(e.target.value)} placeholder='URL da imagem'/>
+          <br />
           <label htmlFor="gameProducer">Produtora</label>
           <br/>
           <input type="text" name="producer" id="gameProducer" value={gameProducer} onChange={e => setGameProducer(e.target.value)}/>
@@ -66,7 +73,8 @@ function CreateGame() {
           <br/>
           <input type="number" name="value" id="gameValue" value={gameValue} onChange={e => setGameValue(e.target.value)}/>
           <br/>
-          <input type="submit"/>
+          <br />
+          <button type="submit">Cadastrar</button>
         </form>
       </div>
     </>

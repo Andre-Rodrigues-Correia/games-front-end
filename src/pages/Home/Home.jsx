@@ -1,10 +1,8 @@
 import { useState,  useEffect } from 'react'
 import api from '../../services/api'
-import List from '../../components/List/List';
 import '../Home/styles.css'
 import { render } from 'react-dom';
 import Modal from 'react-modal';
-
 Modal.setAppElement('body');
 
 const Home = () => {
@@ -19,13 +17,10 @@ const Home = () => {
       margin: 'auto',
       marginTop: '20px',
       backgroundColor: '#F2A71B',
+      textAlign: 'start',
       width: '300px',
-    } ,
-    game: {
-      padding: '10px',
-      backgroundColor: "DodgerBlue",
-    }
-  }; 
+    },
+  };
 
   useEffect(() => {
 
@@ -44,7 +39,7 @@ const Home = () => {
   }
 
   function afterOpenModal() {
-    // references are now sync'd and can be accessed.
+    
 
   }
 
@@ -59,22 +54,29 @@ const Home = () => {
 
       <div className="list">
         <h2>Lista de Jogos</h2>
-        <ul>
+        <div>
         {
               listGames.map((game, i) => {
                   return <div className="listGames" key={i}>
-                      <li>{`Jogo: ${game.name}, valor: ${game.value}.`}</li>
+                    <div>
+                      <img src={game.frontCover ? game.frontCover : '../../public/imagem-indisponível.jpg'} alt="" />
+                    </div>
+                    <div>
+                    <h3>{`Jogo: ${game.name}`}</h3>
+                    <h3>{`Valor: R$${game.value}`}</h3>
                       <div className='btn'>
                         <button onClick={() => {
                           setGame(listGames[i]);
                           openModal()
                         }}>Ver informações</button>
                       </div>
+                    </div>
+                     
                       
                   </div> 
               })
           }
-      </ul>
+      </div>
        
       </div>
 
@@ -99,7 +101,7 @@ const Home = () => {
           <h4>Vendas: {game.sales}</h4>
           <h4>Preço: {game.value}</h4>
 
-          <button onClick={closeModal}>close</button>
+          <button onClick={closeModal}>Fechar</button>
         </div>
        
       </Modal>

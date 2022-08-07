@@ -6,18 +6,37 @@
     margin-top: 10px;
     padding: 30px;
     justify-content: center;
-    
+    align-items: flex-start;
+    text-align: start;
+    border-radius: 10px;
+    width: 825px;
+}
+
+.listDelete{
+    background-color:#F2A71B;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
     border-radius: 10px;
 }
 
-ul {
-    list-style: none;
-    list-style-type: none;
+img{
+    width: 200px;
 }
 
 .listGames{
+    display: inline-block;
+    padding: 5px;
+    
+}
+.listGamesDelete{
     display: block;
     padding: 5px;
+    
 }
 
 .btn{
