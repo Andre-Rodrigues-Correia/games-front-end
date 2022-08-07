@@ -17,6 +17,7 @@ ul {
 
 .listGames{
     display: block;
+    padding: 5px;
 }
 
 .btn{
@@ -34,4 +35,10 @@ button{
     color: white;
     padding: 5px;
     border-radius: 10px;
+}
+
+button:hover{
+    background-color: #e6cb89;
+    cursor: pointer;
+    color: black;
 }

@@ -10,10 +10,10 @@ const Navbar = () => {
     <nav id="navbar">
 
         <ul>
-            <li><Link to='/'><GiConsoleController/></Link></li>
-            <li><Link to='/create-game'>createGame</Link></li>
-            <li><Link to='/update-game'>UpdateGame</Link></li>
-            <li><Link to='/delete-game'>DeleteGame</Link></li>
+            <li><Link to='/'>Todos os Jogos</Link></li>
+            <li><Link to='/create-game'>Cadastrar Jogo</Link></li>
+            <li><Link to='/update-game'>Atualizar Jogo</Link></li>
+            <li><Link to='/delete-game'>Deletar Jogo</Link></li>
         </ul>
 
         {/* <form action="">
